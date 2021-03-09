@@ -1,9 +1,10 @@
 #include "binary_trees.h"
 /**
- * binary_tree_node - a
- * @tree: parent
- * Return: A pointer to the new node or NULL
+ * binary_tree_postorder - goes through tree 
+ * @node: a node
+ * Return: 1 if a node is a leaf, 0 if not
  */
+
 size_t binary_tree_nodes(const binary_tree_t *tree)
 {
 	if (tree == NULL || (!(tree->left) && !(tree->right)))
