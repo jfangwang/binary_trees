@@ -1,6 +1,6 @@
 #include "binary_trees.h"
 /**
- * binary_tree_node - a
+ * binary_tree_is_full - a
  * @tree: parent
  * Return: A pointer to the new node or NULL
  */
@@ -21,8 +21,3 @@ int binary_tree_is_full(const binary_tree_t *tree)
 	}
 	return (1);
 }
-/*
-			A
-		B		C
-	D	E			G
-*/

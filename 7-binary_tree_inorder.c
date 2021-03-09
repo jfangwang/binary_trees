@@ -1,8 +1,8 @@
 #include "binary_trees.h"
 /**
- * binary_tree_node - a
- * @parent: parent
- * @value: Value
+ * binary_tree_inorder - a
+ * @tree: tree
+ * @func: pointer function
  * Return: A pointer to the new node or NULL
  */
 
