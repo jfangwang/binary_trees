@@ -1,7 +1,7 @@
 #include "binary_trees.h"
 /**
- * binary_tree_postorder - goes through tree 
- * @node: a node
+ * binary_tree_is_perfect - goes through tree
+ * @tree: a tree node
  * Return: 1 if a node is a leaf, 0 if not
  */
 
@@ -14,12 +14,13 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 	if (binary_tree_height(tree->left) != binary_tree_height(tree->left))
 		return (0);
 
-	return (binary_tree_is_perfect(tree->left) && binary_tree_is_perfect(tree->right));
+	return (binary_tree_is_perfect(tree->left) &&
+		binary_tree_is_perfect(tree->right));
 }
 
 
 /**
- * binary_tree_node - a
+ * binary_tree_height - a
  * @tree: parent
  * Return: A pointer to the new node or NULL
  */
