@@ -4,9 +4,26 @@
  * @tree: parent
  * Return: A pointer to the new node or NULL
  */
-size_t binary_tree_is_full(const binary_tree_t *tree)
+int binary_tree_is_full(const binary_tree_t *tree)
 {
-	if (tree == NULL || (!(tree->left) && !(tree->right)))
+	/* Base case for leaf node */
+	if (tree->left == NULL && tree->right == NULL)
+		return (1);
+	/* return 1 if there are 2  child */
+	if (tree->left && tree->right)
+	{
+	
+		return (binary_tree_is_full(tree->left) && binary_tree_is_full(tree->right));
+	}
+	else
+	{
+		/* there is 1 child */
 		return (0);
-	return (1 + binary_tree_nodes(tree->left) + binary_tree_nodes(tree->right));
+	}
+	return (1);
 }
+/*
+			A
+		B		C
+	D	E			G
+*/

@@ -14,6 +14,11 @@ size_t binary_tree_height(const binary_tree_t *tree)
 		return (1 + binary_tree_height(tree->right));
 	return (1);
 }
+/**
+ * binary_tree_balance - a
+ * @tree: parent
+ * Return: A pointer to the new node or NULL
+ */
 int binary_tree_balance(const binary_tree_t *tree)
 {
 	if (tree == NULL)
