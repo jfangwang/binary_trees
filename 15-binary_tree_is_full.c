@@ -4,7 +4,7 @@
  * @tree: parent
  * Return: A pointer to the new node or NULL
  */
-size_t binary_tree_nodes(const binary_tree_t *tree)
+size_t binary_tree_is_full(const binary_tree_t *tree)
 {
 	if (tree == NULL || (!(tree->left) && !(tree->right)))
 		return (0);
