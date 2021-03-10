@@ -27,7 +27,8 @@ void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int))
  * @height: height
  * Return: A pointer to the new node or NULL
  */
-void go_through_tree(const binary_tree_t *tree, size_t height, void (*func)(int))
+void go_through_tree(const binary_tree_t *tree, size_t height,
+		     void (*func)(int))
 {
 	size_t h = binary_tree_depth(tree);
 
