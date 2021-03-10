@@ -25,6 +25,7 @@ void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int))
  * go_through_tree - go through the tree and print if height is the same
  * @tree: parent
  * @height: height
+ * @func: function pointer
  * Return: A pointer to the new node or NULL
  */
 void go_through_tree(const binary_tree_t *tree, size_t height,
