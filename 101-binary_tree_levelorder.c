@@ -7,41 +7,38 @@
  */
 void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int))
 {
-	size_t level = 1;
+	size_t level;
 	size_t height = 0;
 
 	if (tree == NULL)
 		return;
-
-	func(tree->n);
 	/* Will get the height of tree */
 	height = binary_tree_height(tree);
 
-	for (level = 1; level <= height; level++)
+	for (level = 0; level <= height; level++)
 	{
-		go_through_tree(tree, level);
+		go_through_tree(tree, level, func);
 	}
 
 }
-
 /**
  * go_through_tree - go through the tree and print if height is the same
  * @tree: parent
  * @height: height
  * Return: A pointer to the new node or NULL
  */
-void go_through_tree(const binary_tree_t *tree, size_t height)
+void go_through_tree(const binary_tree_t *tree, size_t height, void (*func)(int))
 {
 	size_t h = binary_tree_depth(tree);
 
 	if (tree == NULL)
 		return;
 	if (h == height)
-		printf("%d\n", tree->n);
+		func(tree->n);
 	if (tree->left)
-		go_through_tree(tree->left, height);
+		go_through_tree(tree->left, height, func);
 	if (tree->right)
-		go_through_tree(tree->right, height);
+		go_through_tree(tree->right, height, func);
 }
 /**
  * binary_tree_height - a
