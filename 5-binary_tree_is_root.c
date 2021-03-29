@@ -2,7 +2,7 @@
 /**
  * binary_tree_is_root - a
  * @node: Value
- * Return: A pointer to the new node or NULL.
+ * Return: A pointer to the new node or NULL
  */
 int binary_tree_is_root(const binary_tree_t *node)
 {
